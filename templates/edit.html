@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %}Edit ToDo{% endblock %}
+{% block body %}
+<form method="POST" action="/edit/{{ data.id }}/done">
+    <input type="text" name='name' placeholder="Name" class='m-4 form-control'style="display: block; width: 100%;" value="{{ data.name }}">
+    <textarea name="full" cols="30" rows="10" class="m-4 form-control"style="display: block; width: 100%;" placeholder="Full Text">{{ data.text }}</textarea>
+    <input type="submit" value="Edit" name="add" class="btn btn-success m-4" style="width:10%;">
+</form>
+
+{% endblock %}

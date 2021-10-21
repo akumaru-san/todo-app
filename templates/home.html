@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block title %}ToDo Application{% endblock %}
+{% block body %}
+<form method="POST" action="/add/">
+    <input type="text" name='name' placeholder="Name" class='m-4 form-control'style="display: block; width: 100%;">
+    <textarea name="full" cols="30" rows="10" class="m-4 form-control"style="display: block; width: 100%;" placeholder="Full Text"></textarea>
+    <input type="submit" value="Add" name="add" class="btn btn-success m-4" style="width:10%;">
+</form>
+
+
+{% for el in data %}
+<div class="m-3 alert alert-success">
+<h1>{{ el.name }}</h1>
+<p>{{ el.text }}</p>
+<a href="/del/{{ el.id }}" class="btn btn-danger">Delete</a>
+<a href="/edit/{{ el.id }}" class="btn btn-warning">Edit</a>
+</div>
+{% endfor %}
+
+
+{% endblock %}

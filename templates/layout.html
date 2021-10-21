@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    
+    <div class="navbar-light bg-dark">
+        <div class="container p-3 mb-3">
+        <h1 style="text-align: left; color: white;"><a href="/" style="text-decoration: none; color: white;">ToDo App</a></h1> 
+        </div>
+    </div>
+    <div class="container">{% block body %}{% endblock %}</div>
+    <footer class="bg-dark">
+        <p class="container pl-5 p-4 mb-0 mt-4" style="color: white;">
+           &copy;2021 ToDo 
+        </p>
+    </footer>
+</body>
+</html>
