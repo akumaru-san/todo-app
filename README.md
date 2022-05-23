@@ -6,5 +6,5 @@ from app import db
 
 # Creating DataBase
 
-db.create_al()
+db.create_all()
 ```
